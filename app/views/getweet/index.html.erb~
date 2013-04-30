@@ -1,0 +1,6 @@
+<form name="form" action="/getweet/get" method="post" enctype="multipart/form-data">
+  名前入力
+  <br>
+  <input type="text" name="name" size="30" maxlength="100" onKeyPress="return submitStop(event);" placeholder= "名前" />
+  <input type="submit" value="送信" onClick="return checkPass()" >
+</form>

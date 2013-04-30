@@ -1,0 +1,4 @@
+<% @items.each do |item| %>
+[<%= item.cate %>]<%= item.word %> (<%= item.count %>)
+<br />
+<% end %>

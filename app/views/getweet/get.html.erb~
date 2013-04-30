@@ -1,0 +1,17 @@
+<form name="form" action="/twitter" method="post" enctype="multipart/form-data">
+  解析start
+  <br>
+  <% @tweets.each do |tw| %>
+    <input type="hidden" name="tweets[]" value="<%= tw %>"/>
+  <% end %>
+  <input type="hidden" name="tweets[]" value="マクドナルドで食べた"/>
+  <input type="submit" value="送信" onClick="return checkPass()" >
+</form>
+
+
+<%= @friends %>
+<br><br>
+<%= @who %>
+<br><br>
+<%= @tweets %>
+

@@ -1,0 +1,76 @@
+<% if @view %>
+
+<h1>
+Match Tweets (<%= @match_tweets.count %> tweet match!)
+</h1>
+<hr />
+<% i = 0 %>
+<% @match_tweets.each do |match_tweet| %>
+<% i += 1 %>
+<nobr>
+●<%= match_tweet %>
+</nobr>
+<br />
+<% end %>
+<!--
+<%= @checkin_shops.uniq %>
+<br />
+-->
+
+<% else %>
+
+<%
+if false
+  while @n do
+   %>
+   <%= @n.surface.encode('utf-8') %>
+   <%= @n.feature.encode('utf-8') %>
+<%
+    @n = @n.next
+  end
+end
+%>
+
+
+
+<div style="float:left;">
+Parse Tweet<br />
+<%
+   @tweets.each do |tweet|
+   while tweet do
+   if tweet.surface != "" then
+   %>
+<%= tweet.surface %>(<%= tweet.feature.split(",")[0] %>)
+<br />
+<%
+   end
+   tweet = tweet.next
+   end
+%>
+<br />
+<%
+   end
+  %>
+</div>
+
+<div style="float:left;margin-left: 30px;">
+All Tweet<br />
+<%
+   @allTweets.each do |tweet|
+   while tweet do
+   if tweet.surface != "" then
+   %>
+<%= tweet.surface %>(<%= tweet.feature.split(",")[0] %>)
+<br />
+<%
+   end
+   tweet = tweet.next
+   end
+%>
+<br />
+<%
+   end
+  %>
+</div>
+
+<% end %>

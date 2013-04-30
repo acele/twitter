@@ -1,0 +1,54 @@
+<!--
+## 店リストの情報
+<%= @list.items[0] %><br />
+-->
+<!--
+## 店の情報
+<%= @list.items[0].venue %><br />
+-->
+
+自分の状況！！
+<br />
+チェックインの数<%= @list.items.count %>箇所
+<br />
+<br />
+<% i = 0 %>
+<% while i < @list.items.count %>
+<%= @list.items[i].venue.name %>
+<br />
+<% i += 1 %>
+<% end %>
+
+<hr />
+
+<!--
+##多分友達リスト
+<%= @clientA.friends %>
+<br />
+<br />
+<%= @clientA.friends.groups %>
+<br />
+<br />
+<%= @clientA.friends.groups[1].items[0] %>
+<br />
+<br />
+-->
+
+
+友達の状況！！
+<br />
+友達の数<%= @clientA.friends.groups.count %>人
+<br />
+<br />
+<% i = 0 %>
+<% while i < @clientA.friends.groups.count %>
+<%= @clientA.friends.groups[1].items[i].id %>
+<br />
+<% i += 1 %>
+<% end %>
+<br />
+
+<!--
+<%= @clientB.friends %><br />
+<br />
+-->

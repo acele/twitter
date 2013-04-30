@@ -1,0 +1,8 @@
+class CreateAnaTweets < ActiveRecord::Migration
+  def change
+    create_table :ana_tweets do |t|
+
+      t.timestamps
+    end
+  end
+end

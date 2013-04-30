@@ -1,0 +1,24 @@
+<form name="form" action="/twitter" method="post" enctype="multipart/form-data">
+  解析start
+  <br>
+  <% @tweets.each do |tw| %>
+    <input type="hidden" name="tweets[]" value="<%= tw %>"/>
+  <% end %>
+  <input type="submit" value="送信" onClick="return checkPass()" >
+</form>
+
+<form name="form" action="/push/tweet" method="post" enctype="multipart/form-data">
+  DB
+  <br>
+  <% @tweets.each do |tw| %>
+    <input type="hidden" name="tweets[]" value="<%= tw %>"/>
+  <% end %>
+  <input type="submit" value="送信" onClick="return checkPass()" >
+</form>
+
+<%= @friends %>
+<br><br>
+<%= @who %>
+<br><br>
+<%= @tweets %>
+
